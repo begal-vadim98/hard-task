@@ -14,7 +14,8 @@ const funcСhangeNumber = () => {
     return x;
 
 }
+const resultFuncChangeNumber = funcСhangeNumber() ;
 
-console.log("Произведение цифр этого числа:" + " " + funcСhangeNumber() );
-console.log("Данное число в 3 степени:" + " " + funcСhangeNumber() ** 3);
-console.log( ( (funcСhangeNumber() ** 3).toString() ).substring(0, 2));
+console.log("Произведение цифр этого числа:" + " " + resultFuncChangeNumber );
+console.log("Данное число в 3 степени:" + " " + resultFuncChangeNumber ** 3);
+console.log( ( (resultFuncChangeNumber ** 3).toString() ).substring(0, 2));
