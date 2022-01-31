@@ -1,34 +1,39 @@
 'use strict'
 
-const lang = "RU",
+const lang = "en",
   weekday = {
     ru : ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
     en : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
   };
-    
+// Решение через многомерный массив
+console.log(weekday[lang.toLowerCase()]);
+
+// Решение через if
+if(lang.toLowerCase() === 'ru') {
+
   console.log(weekday[lang.toLowerCase()]);
 
-//  Решение через switch 
-/*
-const weekdayRu = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-weekdayEn = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+} else if (lang.toLowerCase() === 'en') {
 
+  console.log(weekday[lang.toLowerCase()]);
+
+} else {
+  console.log("Выбранного языка нет")
+}
+
+//  Решение через switch 
 switch (lang.toLowerCase()) {
 
   case "ru":
-    weekdayRu.forEach((elem, index, arr) => {
-      console.log(arr[index])
-    });
-    break;
+   console.log(weekday[lang.toLowerCase()]);
+  break;
 
   case "en": 
-    weekdayRu.forEach((elem, index, arr) => {
-      console.log(arr[index])
-    });
-    break;
+    console.log(weekday[lang.toLowerCase()]);
+  break;
 
 }
-*/
+
 // Задание 2
 
 const namePerson = "Вадим";
