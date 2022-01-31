@@ -1,21 +1,23 @@
 'use strict'
 
-const lang = "en",
-  weekday = {
-    ru : ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-    en : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-  };
+const lang = "RU",
+  weekday = new Map([
+    ["ru", ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']],
+    ["en", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']]
+  ]);
+
+ 
 // Решение через многомерный массив
-console.log(weekday[lang.toLowerCase()]);
+console.log(weekday.get(lang.toLowerCase()));
 
 // Решение через if
 if(lang.toLowerCase() === 'ru') {
 
-  console.log(weekday[lang.toLowerCase()]);
+  console.log(weekday.get(lang.toLowerCase()));
 
 } else if (lang.toLowerCase() === 'en') {
 
-  console.log(weekday[lang.toLowerCase()]);
+  console.log(weekday.get(lang.toLowerCase()));
 
 } else {
   console.log("Выбранного языка нет")
@@ -25,11 +27,11 @@ if(lang.toLowerCase() === 'ru') {
 switch (lang.toLowerCase()) {
 
   case "ru":
-   console.log(weekday[lang.toLowerCase()]);
+   console.log(weekday.get(lang.toLowerCase()));
   break;
 
   case "en": 
-    console.log(weekday[lang.toLowerCase()]);
+    console.log(weekday.get(lang.toLowerCase()));
   break;
 
 }
