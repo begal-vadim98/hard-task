@@ -1,14 +1,34 @@
 'use strict'
 
-const lang = "ru",
-  weekday = [['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'], 
-    ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']];
+const lang = "RU",
+  weekday = {
+    ru : ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+    en : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  };
     
+  console.log(weekday[lang.toLowerCase()]);
 
-  lang.toLowerCase() === "ru"  ? console.log(weekday[0]) : 
-  lang.toLowerCase() === "en" ? console.log(weekday[1]) :
-  console.log("Выбранного языка нет в переводе");
+//  Решение через switch 
+/*
+const weekdayRu = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+weekdayEn = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
+switch (lang.toLowerCase()) {
+
+  case "ru":
+    weekdayRu.forEach((elem, index, arr) => {
+      console.log(arr[index])
+    });
+    break;
+
+  case "en": 
+    weekdayRu.forEach((elem, index, arr) => {
+      console.log(arr[index])
+    });
+    break;
+
+}
+*/
 // Задание 2
 
 const namePerson = "Вадим";
