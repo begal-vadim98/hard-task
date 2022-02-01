@@ -2,22 +2,11 @@
 
 const myFunction = function (string) {
   
-  if(typeof string !== 'string') {
+  if(typeof string !== 'string') return "В качестве аргумента передана не строка";
 
-    return "В качестве аргумента передана не строка";
+  string = string.trim();
 
-  } else if(string.length > 30) {
-
-    string = string.trim();
-    string = string.substring(0, 30) + "...";
-
-    return string;
-
-  } else {
-
-    return string;
-
-  }
+  if(string.length > 30) string = string.substring(0, 30) + "..."; return string;
   
 }
-console.log(myFunction("loremloremloremloremloremloremlorem"));
+console.log(myFunction("Функции, анонимные функции, callback - функции, чистые функции"));
