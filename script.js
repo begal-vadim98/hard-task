@@ -1,12 +1,13 @@
 'use strict'
 
-const myFunction = function (string) {
-  
-  if(typeof string !== 'string') return "В качестве аргумента передана не строка";
+const myArr = ['2349', '3672349', '4562349', '22349', '672349', '4442349', '543562349', ];
 
-  string = string.trim();
-
-  if(string.length > 30) string = string.substring(0, 30) + "..."; return string;
+myArr.forEach((elem, index) => {
   
+  if(elem[0] === "2" || elem[0] === "4") console.log(parseInt(elem));
+
+})
+
+for(let i = 2; i < 101; i++) {
+  console.log(`${i} - Делители этого числа: 1 и ${i} `);
 }
-console.log(myFunction("Функции, анонимные функции, callback - функции, чистые функции"));
