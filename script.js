@@ -8,6 +8,16 @@ myArr.forEach((elem, index) => {
 
 })
 
-for(let i = 2; i < 101; i++) {
-  console.log(`${i} - Делители этого числа: 1 и ${i} `);
+// Вывод в столбик всех простых чисtk от 1 до 100
+let range = 100;
+marker:
+for(let i = 2; i <= range; i++) {
+  
+
+  for(let n = 2; n < i; n++) {
+
+    if(i % n == 0) continue marker;
+      
+ }
+ console.log(i, ` Делители этого числа: 1 и ${i}`);
 }
