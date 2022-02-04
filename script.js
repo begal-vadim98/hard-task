@@ -1,23 +1,28 @@
 'use strict'
 
-const myArr = ['2349', '3672349', '4562349', '22349', '672349', '4442349', '543562349', ];
+const str = document.querySelectorAll('h3'),
+  box = document.querySelector('.box'),
+  week  = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+  date = new Date();
 
-myArr.forEach((elem, index) => {
+week.forEach((elem, index) => {
+  str[index].textContent = elem;
   
-  if(elem[0] === "2" || elem[0] === "4") console.log(parseInt(elem));
-
 })
+box.style.cssText = ` height: 100vh;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;`;
 
-// Вывод в столбик всех простых чисtk от 1 до 100
-let range = 100;
-marker:
-for(let i = 2; i <= range; i++) {
-  
+str.forEach((elem, index) => {
+  elem.style.fontWeight = "300"
 
-  for(let n = 2; n < i; n++) {
+    if(week[index] === "Суббота" || week[index] === "Воскресенье") {
+      elem.style.fontStyle = "italic"
+    } 
 
-    if(i % n == 0) continue marker;
-      
- }
- console.log(i, ` Делители этого числа: 1 и ${i}`);
-}
+    if(index === (date.getDay() - 1))  {
+      elem.style.fontWeight = "900"
+      elem.textContent =  "Сегодня у нас" + " " + elem.textContent 
+    }
+})
