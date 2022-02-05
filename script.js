@@ -20,9 +20,10 @@ str.forEach((elem, index) => {
     if(week[index] === "Суббота" || week[index] === "Воскресенье") {
       elem.style.fontStyle = "italic"
     } 
-
-    if(index === (date.getDay() - 1))  {
+    if(index === (date.getDay() - 1) || index === (date.getDay() + 6))  {
       elem.style.fontWeight = "900"
       elem.textContent =  "Сегодня у нас" + " " + elem.textContent 
     }
 })
+
+console.log(date.getDay());
