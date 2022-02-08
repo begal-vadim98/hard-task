@@ -77,7 +77,17 @@ const timer = function () {
           stringSeconds = "секунды";
           break;
       }
-      
+      switch(true) {
+        case t.hours < 10:
+          t.hours = "0" + t.hours;
+          break;
+        case t.month < 10:
+          t.month = "0" + t.month;
+          break;
+        case t.seconds < 10:
+          t.seconds = "0" + t.seconds;
+          break;
+      }
       if(t.dateDayB < 10) t.dateDayB = "0" + t.dateDayB;
       if(t.monthNumeric < 10) t.monthNumeric = "0" + t.monthNumeric;
     
