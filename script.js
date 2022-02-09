@@ -10,14 +10,20 @@ myArr.forEach((elem, index) => {
 
 // Вывод в столбик всех простых чисtk от 1 до 100
 let range = 100;
-marker:
-for(let i = 2; i <= range; i++) {
+
+for (let i = 2; i <= range; i++) {
+
+  let n = 1;
+
+  if (i > 2 && i % 2 != 0) {
+
+    for (let j = 3; j <= i; j++) {
+      if (i % j === 0) n = 0;
+      break;
+    }
+
+  } else if (i !== 2) n = 0;
+
+  if (n === 1) console.log(i);
   
-
-  for(let n = 2; n < i; n++) {
-
-    if(i % n == 0) continue marker;
-      
- }
- console.log(i, ` Делители этого числа: 1 и ${i}`);
 }
