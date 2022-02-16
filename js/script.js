@@ -2,12 +2,12 @@
 
 const DomElement = function (selector, title, position, height, width, bg, fontSize) {
   this.selector = selector,
-    this.title = title,
-    this.position = position,
-    this.height = height,
-    this.width = width,
-    this.bg = bg,
-    this.fontSize = fontSize
+  this.title = title,
+  this.position = position,
+  this.height = height,
+  this.width = width,
+  this.bg = bg,
+  this.fontSize = fontSize
 }
 
 DomElement.prototype.createElement = function () {
@@ -36,14 +36,11 @@ DomElement.prototype.createElement = function () {
 
   document.body.append(element);
 }
-const elementOne = new DomElement('#box', 'Первый блок', 'relative', 500, 500, '#fff', 5);
-const elementTwo = new DomElement('.squaer', ' ', 'absolute', 100, 100, 'red', 0);
+const elementOne = new DomElement('#box', '', 'fixed', 500, 500, '#fff', 5);
+const elementTwo = new DomElement('.squaer', 'Я квадрат', 'absolute', 100, 100, 'red', 10);
 
 elementOne.createElement();
 elementTwo.createElement();
-
-
-
 
 const muFuncSquare = function () {
 
@@ -62,15 +59,12 @@ const muFuncSquare = function () {
     squaer.style.marginTop = top + 'px';
     squaer.style.marginLeft = left + 'px';
 
-
     if (code === 'ArrowUp' && top !== 0) return top -= 10;
     if (code === 'ArrowDown' && top <= box.clientHeight - squaer.offsetHeight) return top += 10;
     if (code === 'ArrowLeft' && left !== 0) return left -= 10;
     if (code === 'ArrowRight' && left <= box.clientWidth - squaer.offsetWidth) return left += 10;
 
-
   }
-
   document.addEventListener('keydown', squaerDown);
 }
 
