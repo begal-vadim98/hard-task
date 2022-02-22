@@ -1,5 +1,3 @@
-import one from './modules/one'
-import two from './modules/two'
+import dateRender from './modules/dateRender'
 
-one();
-two()
+dateRender();
