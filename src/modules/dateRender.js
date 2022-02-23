@@ -3,7 +3,7 @@ const dateRender = () => {
 const title = document.getElementById('title'),
   titleTime = document.getElementById('title-time'),
   titleNewYear = document.getElementById('title-newyear'),
-  week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+  week = ['Воскресенье','Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
   date = new Date();
 
   const declinationFunc = function declinationFunc(n, textForms) {
@@ -43,6 +43,7 @@ const title = document.getElementById('title'),
 
   }
 
+
   const renderTimer = () => {
     const t = returnDay();
     const newYearDeadLine = newYear("31 december 2022");
@@ -50,7 +51,7 @@ const title = document.getElementById('title'),
     const greeting = declinationFunc(date.getHours(), ['Доброе Утро', 'Добрый день', 'Добрый Вечер', 'Доброй ночи']);
   
     
-    title.textContent = `${greeting},  сегодня ${week[date.getMonth()] }`
+    title.textContent = `${greeting},  сегодня ${week[date.getDay()] }`
     titleTime.textContent =  `Текущее время: ${t.time}`;
     titleNewYear.textContent =  `До нового года осталось ${newYearDeadLine} ${dayString}`;
 
