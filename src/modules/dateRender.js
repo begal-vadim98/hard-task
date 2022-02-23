@@ -42,11 +42,11 @@ const title = document.getElementById('title'),
     return days
 
   }
-
+  
 
   const renderTimer = () => {
     const t = returnDay();
-    const newYearDeadLine = newYear("31 december 2022");
+    const newYearDeadLine = newYear(`31 december ${date.getFullYear()}`);
     const dayString = declinationDayText(newYearDeadLine, ['день', 'дня', 'дней']);
     const greeting = declinationFunc(date.getHours(), ['Доброе Утро', 'Добрый день', 'Добрый Вечер', 'Доброй ночи']);
   
